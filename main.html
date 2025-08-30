@@ -6,20 +6,54 @@
   <link rel="shortcut icon" href="" type="image/x-icon">
   <style>
     body {
-      background-color: purple;
+      background: url("https://files.catbox.moe/j0lgos.jpg") no-repeat center center fixed;
+      background-size: cover;
       display: flex;
       align-items: center;
       justify-content: center;
       height: 100vh;
       margin: 0;
-      color: white;
+      color: #c4d9ff;
+      font-family: "Trebuchet MS", sans-serif;
+      text-shadow: 0 0 8px #0077ff;
+      overflow: hidden;
+      position: relative;
     }
 
-    {
-            "@context": "https://schema.org",
-            "@type": "Organization",
-            "url": "https://railway.app",
-            "logo": "https://files.catbox.moe/bi8y88.jpg"
+    /* Shadow particles container */
+    .particles {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      overflow: hidden;
+      z-index: 0;
+    }
+
+    .particle {
+      position: absolute;
+      width: 8px;
+      height: 8px;
+      background: rgba(0, 0, 0, 0.8);
+      border-radius: 50%;
+      box-shadow: 0 0 12px rgba(0, 102, 255, 0.6);
+      animation: floatUp linear infinite;
+    }
+
+    @keyframes floatUp {
+      0% {
+        transform: translateY(100vh) scale(0.5);
+        opacity: 0.6;
+      }
+      50% {
+        opacity: 1;
+      }
+      100% {
+        transform: translateY(-10vh) scale(1);
+        opacity: 0;
+      }
     }
 
     .button-container {
@@ -27,76 +61,95 @@
       display: flex;
       flex-direction: column;
       align-items: center;
+      backdrop-filter: blur(6px);
+      padding: 20px;
+      border-radius: 15px;
+      background: rgba(0,0,0,0.55);
+      box-shadow: 0 0 25px rgba(0, 102, 255, 0.7);
+      z-index: 2;
     }
 
     h3 {
-      margin-top: -40px;
+      margin-top: -10px;
       opacity: 0;
       animation: fadeIn 3s forwards;
+      font-size: 30px;
+      font-weight: 900;
+      letter-spacing: 2px;
+      color: #66aaff;
+      text-shadow: 0 0 10px #1e90ff, 0 0 20px #000;
     }
 
     .button {
-      width: 140px;
-      height: 40px;
+      width: 180px;
+      height: 45px;
       display: flex;
       align-items: center;
       justify-content: center;
       gap: 10px;
       padding: 0px 15px;
-      background-color: red;
-      border-radius: 10px;
+      border-radius: 12px;
       border: none;
       color: white;
       position: relative;
       cursor: pointer;
       font-weight: 900;
-      transition-duration: .2s;
-      background: linear-gradient(0deg, #000, #272727);
+      transition: transform 0.2s ease-in-out;
+      background: linear-gradient(90deg, #001f3f, #0047ab, #000);
       text-decoration: none;
+      box-shadow: 0 0 12px rgba(0, 102, 255, 0.7);
+      margin: 8px 0;
+      z-index: 2;
     }
 
-  
+    .button:hover {
+      transform: scale(1.08);
+      box-shadow: 0 0 20px #1e90ff, 0 0 40px #000;
+    }
+
     footer {
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    background-color: #222; /* Darker gray footer background */
-    color: #fff;
-    padding: 10px 0;
-    text-align: center;
-    font-size: 14px;
-    
-  }
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+      background-color: #0d0d0d;
+      color: #66aaff;
+      padding: 10px 0;
+      text-align: center;
+      font-size: 14px;
+      font-weight: bold;
+      text-shadow: 0 0 6px #0077ff;
+      border-top: 1px solid #1e90ff;
+      z-index: 2;
+    }
+
     .button:before, .button:after {
       content: '';
       position: absolute;
       left: -2px;
       top: -2px;
-      border-radius: 10px;
-      background: linear-gradient(45deg, #48ff00, #15ff00, #000000,#000000, #ff0000);
+      border-radius: 12px;
+      background: linear-gradient(45deg, #0077ff, #1e90ff, #000000, #4b0082);
       background-size: 400%;
       width: calc(100% + 4px);
       height: calc(100% + 4px);
       z-index: -1;
-      animation: steam 10s linear infinite;
+      animation: aura 8s linear infinite;
     }
 
-    @keyframes steam {
+    @keyframes aura {
       0% {
         background-position: 0 0;
       }
-
       50% {
         background-position: 400% 0;
       }
-
       100% {
         background-position: 0 0;
       }
     }
 
     .button:after {
-      filter: blur(50px);
+      filter: blur(30px);
     }
 
     .button span {
@@ -111,21 +164,39 @@
   </style>
 </head>
 <body>
+  <!-- Shadow particles layer -->
+  <div class="particles"></div>
+
   <div class="button-container">
     <h3> SUHO SESSION</h3>
-    <div></div>
-    <a href="/qr" class="button" target="_blank"> <span>QR-CODE</span> </a> <br>
-    <a href="/pair" class="button" target="_blank"> <span>PAIRING-CODE</span> </a> <br>
-    <a href="https://github.com/XdKing2/Sung-Suho-MD/fork" class="button" target="_blank"> <span>FORK SUHO MD</span> </a> <br> </a>
-    <a href="https://whatsapp.com/channel/0029VbA6MSYJUM2TVOzCSb2A" class="button" target="_blank"> <span>WhatsApp</span> </a> <br>
+    <a href="/qr" class="button" target="_blank"> <span>QR-CODE</span> </a> 
+    <a href="/pair" class="button" target="_blank"> <span>PAIRING-CODE</span> </a> 
+    <a href="https://github.com/NaCkS-ai/Sung-Suho-MD/fork" class="button" target="_blank"> <span>FORK SUHO MD</span> </a> 
+    <a href="https://whatsapp.com/channel/0029VbA6MSYJUM2TVOzCSb2A" class="button" target="_blank"> <span>WhatsApp</span> </a> 
 
-    <p>HAVE ANY ERROR CLICK ERROR BUTTON</p>
+    <p style="color:#7aaeff; text-shadow:0 0 8px #0047ab;">HAVE ANY ERROR CLICK ERROR BUTTON</p>
 
-    <a href="https://wa.me/12363621958" class="button" target="_blank"> <span>ERROR</span> </a> <br>
+    <a href="https://wa.me/12363621958" class="button" target="_blank"> <span>ERROR</span> </a> 
+  </div>
 
-    <footer>
+  <footer>
      MALVIN &copy; <span id="currentYear"></span>
-    </footer>
-  
+  </footer>
+
+  <script>
+    // Generate shadow particles
+    const particleContainer = document.querySelector('.particles');
+    const numParticles = 25; // number of floating shadows
+
+    for (let i = 0; i < numParticles; i++) {
+      const particle = document.createElement('div');
+      particle.classList.add('particle');
+      particle.style.left = Math.random() * 100 + 'vw';
+      particle.style.animationDuration = (5 + Math.random() * 10) + 's';
+      particle.style.opacity = Math.random();
+      particle.style.width = particle.style.height = (5 + Math.random() * 8) + 'px';
+      particleContainer.appendChild(particle);
+    }
+  </script>
 </body>
 </html>
