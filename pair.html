@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Suho PAIR CODE</title>
+  <title>SUHO PAIR CODE</title>
   <link rel="stylesheet" href="css/all.min.css">
   <style>
     body {
@@ -12,11 +12,11 @@
       align-items: center;
       height: 100vh;
       margin: 0;
-      background-image: url("https://files.catbox.moe/pyda5w.jpg"); /* Sung Jin-Woo + Suho background */
+      background-image: url("https://files.catbox.moe/7n3xd3.jpg"); /* Solo Leveling background */
       background-repeat: no-repeat;
       background-position: center;
       background-size: cover;
-      font-family: Arial, sans-serif;
+      font-family: "Arial Black", Arial, sans-serif;
       color: #fff;
       overflow: hidden;
     }
@@ -28,85 +28,151 @@
     }
 
     .box {
-      width: 300px;
-      height: 330px;
+      width: 320px;
+      height: 350px;
       padding: 20px;
       position: relative;
       text-align: center;
-      background: rgba(10,10,20,0.7); /* Dark translucent box */
-      border-radius: 10px;
-      transform: perspective(1000px) rotateY(0deg);
-      border: 2px solid #00f7ff; /* Neon blue border */
-      box-shadow: 0 0 20px #00f7ff, 0 0 40px #6e00ff inset; /* Glowing effect */
-      position: relative;
+      background: rgba(0,0,0,0.85);
+      border-radius: 15px;
+      border: 2px solid #8a2be2;
+      box-shadow: 0 0 20px #8a2be2, 0 0 40px #4b0082 inset;
+      animation: pulseBox 3s infinite alternate;
+    }
+
+    @keyframes pulseBox {
+      0% {
+        box-shadow: 0 0 20px #8a2be2, 0 0 40px #4b0082 inset;
+        transform: scale(1);
+      }
+      50% {
+        box-shadow: 0 0 35px #8a2be2, 0 0 70px #4b0082 inset;
+        transform: scale(1.02);
+      }
+      100% {
+        box-shadow: 0 0 20px #8a2be2, 0 0 40px #4b0082 inset;
+        transform: scale(1);
+      }
     }
 
     #text {
-      color: #00f7ff;
+      color: #8a2be2;
+    }
+
+    /* Capsule-style input container */
+    .input-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 20px;
+      background: linear-gradient(145deg, rgba(10,10,20,0.85), rgba(30,0,50,0.85));
+      padding: 20px 25px;
+      border-radius: 50px;
+      border: 2px solid #8a2be2;
+      box-shadow: 0 0 25px #8a2be2, 0 0 40px #4b0082 inset;
+      transition: all 0.3s ease;
     }
 
     .input-container input {
       color: #fff;
       background: rgba(20,20,40,0.9);
-      border-left: 2px solid #00f7ff;
+      border: none;
+      padding: 12px 20px;
+      border-radius: 50px;
+      width: 100%;
+      max-width: 220px;
+      text-align: center;
+      font-size: 1rem;
+      outline: none;
+      box-shadow: 0 0 15px #8a2be2 inset;
+      transition: all 0.3s ease;
+    }
+
+    .input-container input:focus {
+      box-shadow: 0 0 25px #8a2be2 inset, 0 0 35px #4b0082;
+      background: rgba(25,0,50,0.95);
     }
 
     .input-container button {
-      background: linear-gradient(135deg, #6e00ff 0%, #00f7ff 100%);
+      margin-top: 15px;
+      padding: 10px 30px;
+      width: 60%;
+      font-weight: bold;
+      letter-spacing: 1px;
+      border-radius: 50px;
+      background: linear-gradient(135deg, #4b0082 0%, #8a2be2 100%);
       color: #fff;
+      border: none;
+      cursor: pointer;
+      box-shadow: 0 0 15px #8a2be2, 0 0 30px #4b0082 inset;
+      transition: all 0.3s ease;
+      animation: pulseShadow 2s infinite alternate;
     }
 
     .input-container button:hover {
-      background: linear-gradient(135deg, #32CD32 0%, #7CFC00 100%);
-      color: #ff0000;
+      background: linear-gradient(135deg, #ff4500 0%, #ff6347 100%);
+      color: #000;
+      box-shadow: 0 0 20px #ff4500, 0 0 40px #ff6347 inset;
+    }
+
+    @keyframes pulseShadow {
+      0% {
+        box-shadow: 0 0 15px #8a2be2, 0 0 30px #4b0082 inset;
+      }
+      50% {
+        box-shadow: 0 0 25px #8a2be2, 0 0 50px #4b0082 inset;
+      }
+      100% {
+        box-shadow: 0 0 15px #8a2be2, 0 0 30px #4b0082 inset;
+      }
     }
 
     .centered-text {
-      color: #00f7ff;
+      color: #8a2be2;
     }
 
     .glowing-text {
-      margin-top: 20px;
+      margin-top: 25px;
       font-size: 1.2rem;
       font-weight: bold;
-      color: #00f7ff;
+      color: #8a2be2;
       text-shadow: 
-        0 0 5px #00f7ff, 
-        0 0 10px #6e00ff, 
-        0 0 15px #00f7ff, 
-        0 0 20px #6e00ff, 
-        0 0 25px #00f7ff, 
-        0 0 30px #6e00ff;
+        0 0 5px #8a2be2, 
+        0 0 10px #4b0082, 
+        0 0 15px #8a2be2, 
+        0 0 20px #4b0082, 
+        0 0 25px #8a2be2, 
+        0 0 30px #4b0082;
       animation: glow 2s infinite;
     }
 
     @keyframes glow {
       0% {
         text-shadow: 
-          0 0 5px #00f7ff, 
-          0 0 10px #6e00ff, 
-          0 0 15px #00f7ff, 
-          0 0 20px #6e00ff, 
-          0 0 25px #00f7ff, 
-          0 0 30px #6e00ff;
+          0 0 5px #8a2be2, 
+          0 0 10px #4b0082, 
+          0 0 15px #8a2be2, 
+          0 0 20px #4b0082, 
+          0 0 25px #8a2be2, 
+          0 0 30px #4b0082;
       }
       50% {
         text-shadow: 
-          0 0 5px #32CD32, 
-          0 0 10px #7CFC00, 
-          0 0 15px #32CD32, 
-          0 0 20px #7CFC00, 
-          0 0 25px #32CD32, 
-          0 0 30px #7CFC00;
+          0 0 5px #ff4500, 
+          0 0 10px #ff6347, 
+          0 0 15px #ff4500, 
+          0 0 20px #ff6347, 
+          0 0 25px #ff4500, 
+          0 0 30px #ff6347;
       }
       100% {
         text-shadow: 
-          0 0 5px #00f7ff, 
-          0 0 10px #6e00ff, 
-          0 0 15px #00f7ff, 
-          0 0 20px #6e00ff, 
-          0 0 25px #00f7ff, 
-          0 0 30px #6e00ff;
+          0 0 5px #8a2be2, 
+          0 0 10px #4b0082, 
+          0 0 15px #8a2be2, 
+          0 0 20px #4b0082, 
+          0 0 25px #8a2be2, 
+          0 0 30px #4b0082;
       }
     }
   </style>
@@ -133,7 +199,7 @@
         </div>
       </div>
     </div>
-    <div class="glowing-text">Powered By Dev Sung</div>
+    <div class="glowing-text">Powered By Shadow Monarch</div>
   </div>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.0.0-alpha.1/axios.min.js"></script>
   <script>
@@ -188,4 +254,4 @@
     });
   </script>
 </body>
-    </html>
+</html>
