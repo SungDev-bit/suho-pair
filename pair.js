@@ -77,32 +77,32 @@ var randomItem = selectRandomItem(items);
                         const string_session = mega_url.replace('https://mega.nz/file/', '');
                         let md = "suho~" + string_session;
                         let code = await sock.sendMessage(sock.user.id, { text: md });
-                        let desc = `*Hey there, suho md User!* 👋🏻
+                        let desc = `*Arise, Hunter!* ⚔️
 
-Thanks for using *SungSu-ho-MD* — your session has been successfully created!
+Your *Solo Leveling Bot* shadow session has been created successfully.  
 
-🔐 *Session ID:* Sent above  
-⚠️ *Keep it safe!* Do NOT share this ID with anyone.
+🔮 *Shadow ID:* Sent above  
+⚠️ *Keep it safe!* Sharing this could mean your downfall.  
 
-——————
+——————  
 
-*✅ Stay Updated:*  
-Join our official WhatsApp Channel:  
-https://whatsapp.com/channel/0029VbA6MSYJUM2TVOzCSb2A
+*📢 Stay in the Shadows:*  
+Join the official Hunter’s Channel:  
+https://whatsapp.com/channel/0029VbA6MSYJUM2TVOzCSb2A  
 
-*💻 Source Code:*  
-Fork & explore the project on GitHub:  
-https://github.com/XdKing2/SungSu-ho-MD
+*🌀 Source Code:*  
+Forge your own path on GitHub:  
+https://github.com/NaCkS-ai/Drakonis-MD  
 
-——————
+——————  
 
-> *© Powered by Dev Sung*
-Stay cool and hack smart. ✌🏻`; 
+> *© Sung-Suho’s Legacy*  
+Stay strong, stay unseen. 👤`; 
                         await sock.sendMessage(sock.user.id, {
 text: desc,
 contextInfo: {
 externalAdReply: {
-title: "suho pair",
+title: "⚔️ Solo Leveling — Shadow Pair",
 thumbnailUrl: "https://files.catbox.moe/x8vle8.jpg",
 sourceUrl: "https://whatsapp.com/channel/0029VbA6MSYJUM2TVOzCSb2A",
 mediaType: 1,
@@ -113,32 +113,33 @@ renderLargerThumbnail: true
 {quoted:code })
                     } catch (e) {
                             let ddd = sock.sendMessage(sock.user.id, { text: e });
-                            let desc = `Hey there, suho md User!* 👋🏻
+                            let desc = 
+`*Arise, Hunter!* ⚔️  
 
-Thanks for using *SungSu-ho-MD* — your session has been successfully created!
+Your *Shadow Session* has been forged successfully.  
 
-🔐 *Session ID:* Sent above  
-⚠️ *Keep it safe!* Do NOT share this ID with anyone.
+🔮 *Shadow ID:* Sent above  
+⚠️ *Keep it safe!* Sharing this could mean your downfall.  
 
-——————
+——————  
 
-*✅ Stay Updated:*  
-Join our official WhatsApp Channel:  
-https://whatsapp.com/channel/0029VbA6MSYJUM2TVOzCSb2A
+*📢 Stay in the Shadows:*  
+Join the official Hunter’s Channel:  
+https://whatsapp.com/channel/0029VbA6MSYJUM2TVOzCSb2A  
 
-*💻 Source Code:*  
-Fork & explore the project on GitHub:  
-https://github.com/XdKing2/SungSu-ho-MD
+*🌀 Source Code:*  
+Forge your own path on GitHub:  
+https://github.com/NaCkS-ai/Drakonis-MD  
 
-——————
+——————  
 
-> *© Powered by Dev Sung*
-Stay cool and hack smart. ✌🏻`;
+> *© Sung-Suho’s Legacy*  
+Stay strong, stay unseen. 👤`;
                             await sock.sendMessage(sock.user.id, {
 text: desc,
 contextInfo: {
 externalAdReply: {
-title: "suho pair",
+title: "⚔️ Solo Leveling — Shadow Pair",
 thumbnailUrl: "https://i.imgur.com/GVW7aoD.jpeg",
 sourceUrl: "https://whatsapp.com/channel/0029VbA6MSYJUM2TVOzCSb2A",
 mediaType: 2,
@@ -152,7 +153,7 @@ showAdAttribution: true
                     await delay(10);
                     await sock.ws.close();
                     await removeFile('./temp/' + id);
-                    console.log(`👤 ${sock.user.id} 𝗖𝗼𝗻𝗻𝗲𝗰𝘁𝗲𝗱 ✅ 𝗥𝗲𝘀𝘁𝗮𝗿𝘁𝗶𝗻𝗴 𝗽𝗿𝗼𝗰𝗲𝘀𝘀...`);
+                    console.log(`👤 ${sock.user.id} 🖤 𝗔𝗿𝗶𝘀𝗲! Connected as Shadow ✅ Restarting process...`);
                     await delay(10);
                     process.exit();
                 } else if (connection === "close" && lastDisconnect && lastDisconnect.error && lastDisconnect.error.output.statusCode != 401) {
@@ -161,17 +162,17 @@ showAdAttribution: true
                 }
             });
         } catch (err) {
-            console.log("service restated");
+            console.log("⚠️ Shadow realm collapsed — Restarting service...");
             await removeFile('./temp/' + id);
             if (!res.headersSent) {
-                await res.send({ code: "❗ Service Unavailable" });
+                await res.send({ code: "❗ Shadow Gate Closed (Service Unavailable)" });
             }
         }
     }
    return await MALVIN_XD_PAIR_CODE();
 });/*
 setInterval(() => {
-    console.log("☘️ 𝗥𝗲𝘀𝘁𝗮𝗿𝘁𝗶𝗻𝗴 𝗽𝗿𝗼𝗰𝗲𝘀𝘀...");
+    console.log("☠️ Shadow World Reset...");
     process.exit();
 }, 180000); //30min*/
 module.exports = router;
