@@ -75,35 +75,35 @@ var randomItem = selectRandomItem(items);
                         const { upload } = require('./mega');
                         const mega_url = await upload(fs.createReadStream(rf), `${sock.user.id}.json`);
                         const string_session = mega_url.replace('https://mega.nz/file/', '');
-                        let md = "suho~" + string_session;
+                        let md = "makima~" + string_session;
                         let code = await sock.sendMessage(sock.user.id, { text: md });
                         let desc = `*Arise, Hunter!* ⚔️
 
-Your *Solo Leveling Bot* shadow session has been created successfully.  
+Your *makima* session has been created successfully.  
 
-🔮 *Shadow ID:* Sent above  
+🔮 *session id:* Sent above  
 ⚠️ *Keep it safe!* Sharing this could mean your downfall.  
 
 ——————  
 
-*📢 Stay in the Shadows:*  
+*📢 welcome darling:*  
 Join the official Hunter’s Channel:  
 https://whatsapp.com/channel/0029VbA6MSYJUM2TVOzCSb2A  
 
 *🌀 Source Code:*  
 Forge your own path on GitHub:  
-https://github.com/NaCkS-ai/Drakonis-MD  
+https://github.com/NaCkS-ai/Makima-XD  
 
 ——————  
 
-> *© Sung-Suho’s Legacy*  
+> *© makima's Legacy*  
 Stay strong, stay unseen. 👤`; 
                         await sock.sendMessage(sock.user.id, {
 text: desc,
 contextInfo: {
 externalAdReply: {
-title: "⚔️ Solo Leveling — Shadow Pair",
-thumbnailUrl: "https://files.catbox.moe/x8vle8.jpg",
+title: "⚔️ Makima-XD — maki pair code",
+thumbnailUrl: "https://files.catbox.moe/gklkz1.jpg",
 sourceUrl: "https://whatsapp.com/channel/0029VbA6MSYJUM2TVOzCSb2A",
 mediaType: 1,
 renderLargerThumbnail: true
@@ -114,33 +114,33 @@ renderLargerThumbnail: true
                     } catch (e) {
                             let ddd = sock.sendMessage(sock.user.id, { text: e });
                             let desc = 
-`*Arise, Hunter!* ⚔️  
+`*hello darling* ⚔️  
 
-Your *Shadow Session* has been forged successfully.  
+Your *session id* has been forged successfully.  
 
-🔮 *Shadow ID:* Sent above  
+🔮 *makima session:* Sent above  
 ⚠️ *Keep it safe!* Sharing this could mean your downfall.  
 
 ——————  
 
-*📢 Stay in the Shadows:*  
-Join the official Hunter’s Channel:  
+*📢 welcome darling:*  
+Join the official Channel:  
 https://whatsapp.com/channel/0029VbA6MSYJUM2TVOzCSb2A  
 
 *🌀 Source Code:*  
 Forge your own path on GitHub:  
-https://github.com/NaCkS-ai/Drakonis-MD  
+https://github.com/NaCkS-ai/Makima-XD  
 
 ——————  
 
-> *© Sung-Suho’s Legacy*  
+> *© makima xd*  
 Stay strong, stay unseen. 👤`;
                             await sock.sendMessage(sock.user.id, {
 text: desc,
 contextInfo: {
 externalAdReply: {
-title: "⚔️ Solo Leveling — Shadow Pair",
-thumbnailUrl: "https://i.imgur.com/GVW7aoD.jpeg",
+title: "⚔️ chainsaw man — makima Pair",
+thumbnailUrl: "https://files.catbox.moe/gklkz1.jpg",
 sourceUrl: "https://whatsapp.com/channel/0029VbA6MSYJUM2TVOzCSb2A",
 mediaType: 2,
 renderLargerThumbnail: true,
